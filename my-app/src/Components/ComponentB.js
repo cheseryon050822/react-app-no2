@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,Link, Switch,useHistory} from 'react-router-dom';
+import {BrowserRouter as Router, Switch,useHistory} from 'react-router-dom';
 
 const ComponentB = () =>{
     const history= useHistory()
