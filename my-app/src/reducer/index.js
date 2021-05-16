@@ -8,10 +8,7 @@ const reducer = (state=[],action)=>{
         console.log(id)
         return [...state,{id,...event}];
     case DELETE_ALL_EVENT:
-        const Nankai={title:action.title,body:action.title};
-        const di = state.length  - 
-        console.log(di)
-        return [...state,{di,...Nankai}];
+        return []
     default:
         return state;
 

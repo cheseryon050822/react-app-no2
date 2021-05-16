@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Switch,useHistory} from 'react-router-dom';
 import axios from 'axios'
 
 const ComponentA = () => {
-  const [count,setCount]=useState(0)
+  const [count]=useState(0)
   const history= useHistory()
   const ComponentB = () => {
       history.push("/ComponentB")

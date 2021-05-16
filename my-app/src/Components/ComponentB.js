@@ -4,8 +4,6 @@ import {ADD_EVENT, DELETE_ALL_EVENT}from '../actions/index';
 import reducer from '../reducer/index';
 import {Button,Form,Table}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 const ComponentB = () =>{
     const [state,dispatch]=useReducer(reducer,[]);
     const [title,setTitle]=useState('');
@@ -21,7 +19,6 @@ const ComponentB = () =>{
         setTitle('');
         setBody('');
     };
-
     const FukuokaDaieiHowks = (f)=>{
         f.preventDefault();
         dispatch({
@@ -32,16 +29,12 @@ const ComponentB = () =>{
         setTitle('');
         setBody('');
     };
-
-
     const joumon = () => {
     ("/")
         }
     const  heian= () => {
     ("/ComponentC")
     }
-    
-    
     return(
         <div>
             <div>ComponentB</div>
@@ -49,7 +42,7 @@ const ComponentB = () =>{
        <Form>
         <Form.Group control="fromBasicPassword">
         <Form.Label>Title</Form.Label>
-            <Form.Control
+        <Form.Control
                 type="text"
                 pleceholder="title"
                 value={title}
@@ -61,27 +54,29 @@ const ComponentB = () =>{
                 value={body}
                 onChange={(e)=>setBody(e.target.value)} />
         </Form.Group>
-        <Button variant="danger" onClick={handleClick}>
+        <Button variant="primary" onClick={handleClick}> 
             イベント作成
         </Button>
-        <Button variant="primary" onClick={FukuokaDaieiHowks}>
+        <Button variant="danger"onClick={FukuokaDaieiHowks}>
             イベント全削除
         </Button> 
-        </Form>
+    </Form>             
        
-        
+    
       
       <div>
       <button onClick={joumon}>ComponentAへ移動</button>
       <button onClick={heian}>ComponentCへ移動</button>  
         </div>
         <h1>Table</h1>
+        
         <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>id</th>
                     <th>title</th>
                     <th>body</th>
+                    <th>comment</th>
                     <th>#</th>
                 </tr>
             </thead>
@@ -92,6 +87,7 @@ const ComponentB = () =>{
                             <td>{data.id}</td>
                             <td>{data.body}</td>
                             <td>{data.title}</td>
+                            <td>{data.comment}</td>
                             <td>
                              <Button variant="danger">削除</Button>
                             </td>
