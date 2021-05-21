@@ -1,6 +1,6 @@
 import React,{useReducer,useState} from 'react';
 import {Link} from 'react-router-dom';
-import {ADD_EVENT, DELETE_ALL_EVENT}from '../actions/index';
+import {ADD_EVENT, DELETE_ALL_EVENT,BULE_WAVE}from '../actions/index';
 import reducer from '../reducer/index';
 import {Button,Form,Table}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,6 +28,14 @@ const ComponentB = () =>{
         });
         setTitle('');
         setBody('');
+    };
+    const Osakakintetu = (g)=>{
+        g.preventDefault();
+        dispatch({
+            type:BULE_WAVE,
+            title,
+            body
+        });
     };
     const joumon = () => {
     ("/")
@@ -85,11 +93,11 @@ const ComponentB = () =>{
                     return(
                         <tr key={index}>
                             <td>{data.id}</td>
-                            <td>{data.body}</td>
-                            <td>{data.title}</td>
-                            <td>{data.comment}</td>
+                            <td>{data.body}adsf</td>
+                            <td>{data.title}adsf</td>
+                            <td>{data.comment}adsf</td>
                             <td>
-                             <Button variant="danger">削除</Button>
+                             <Button variant="danger"onClick={Osakakintetu}>削除</Button>
                             </td>
                         </tr>
                     );

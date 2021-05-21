@@ -1,4 +1,4 @@
-import {ADD_EVENT,DELETE_ALL_EVENT} from '../actions/index';
+import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE} from '../actions/index';
 
 const reducer = (state=[],action)=>{
     switch (action.type) {
@@ -9,7 +9,10 @@ const reducer = (state=[],action)=>{
         return [...state,{id,...event}];
     case DELETE_ALL_EVENT:
         return []
-    default:
+    case BULE_WAVE:
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        const result = words.filter(word => word.length > 10);
+        console.log(result);
         return state;
 
     }
