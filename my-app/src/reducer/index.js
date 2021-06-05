@@ -1,5 +1,4 @@
 import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE} from '../actions/index';
-
 const reducer = (state=[],action)=>{
     switch (action.type) {
     case ADD_EVENT:
@@ -10,12 +9,21 @@ const reducer = (state=[],action)=>{
     case DELETE_ALL_EVENT:
         return []
     case BULE_WAVE:
-        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-        const result = words.filter(word => word.length > 10);
-        console.log(result);
-        return state;
-
+        state.filter={}
+        console.log(action.id)
+        let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+        function filterItems(arr, query) {
+            return arr.filter(function(el) {
+                return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+            })
+          }
+          
+          console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
+          console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+        return[]
+        
+        default:
+            return state
     }
 };
-
 export default reducer;

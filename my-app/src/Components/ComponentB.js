@@ -29,20 +29,14 @@ const ComponentB = () =>{
         setTitle('');
         setBody('');
     };
-    const Osakakintetu = (g)=>{
-        g.preventDefault();
-        dispatch({
-            type:BULE_WAVE,
-            title,
-            body
-        });
-    };
+
     const joumon = () => {
     ("/")
         }
     const  heian= () => {
     ("/ComponentC")
     }
+    console.log (state,"SATO TERUAKI");
     return(
         <div>
             <div>ComponentB</div>
@@ -90,6 +84,13 @@ const ComponentB = () =>{
             </thead>
             <tbody>
                 {state.map((data,index)=>{
+                        const Osakakintetu = (e)=>{
+                            e.preventDefault();
+                            dispatch({
+                                type:BULE_WAVE,
+                                id:data.id
+                            });
+                        };
                     return(
                         <tr key={index}>
                             <td>{data.id}</td>
