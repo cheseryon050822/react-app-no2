@@ -9,21 +9,9 @@ const reducer = (state=[],action)=>{
     case DELETE_ALL_EVENT:
         return []
     case BULE_WAVE:
-        state.filter={}
-        console.log(action.id)
-        let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
-        function filterItems(arr, query) {
-            return arr.filter(function(el) {
-                return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
-            })
-          }
-          
-          console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-          console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
-        return[]
-        
-        default:
-            return state
+        const result = state.filter(data => data.id !== action.id)
+        console.log(result)
+        return result
     }
 };
 export default reducer;

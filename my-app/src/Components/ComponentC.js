@@ -1,6 +1,7 @@
 import React,{useReducer} from 'react';
 import {BrowserRouter as Router, Switch,useHistory} from 'react-router-dom';
 import reducer from '../reducer/index';
+import ComponentD from './ComponentD';
 
 const initialCount={
     count:0
@@ -20,15 +21,14 @@ const increment= () =>{
     });
 };
     return(
-　　<Router>
-     <Switch>
          <div>
          <button onClick={yayoi}>ComponentBへ移動</button>
          <button onClick={increment}>+</button>
          <h1>{state.count}</h1>
+         <ComponentD>
+         </ComponentD>
          </div>
-     </Switch>
-    </Router>
+
     );
 };
 
