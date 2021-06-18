@@ -4,6 +4,7 @@ import {ADD_EVENT, DELETE_ALL_EVENT,BULE_WAVE}from '../actions/index';
 import reducer from '../reducer/index';
 import {Button,Form,Table}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ComponentF from './ComponentF';
 const ComponentB = () =>{
     const [state,dispatch]=useReducer(reducer,[]);
     const [title,setTitle]=useState('');
@@ -40,7 +41,8 @@ const ComponentB = () =>{
     return(
         <div>
             <div>ComponentB</div>
-            <Link to="/componentc">ComponentCへ移動</Link>
+            <Link to="/ComponentC">ComponentCへ移動</Link>
+            <ComponentF></ComponentF>
        <Form>
         <Form.Group control="fromBasicPassword">
         <Form.Label>Title</Form.Label>

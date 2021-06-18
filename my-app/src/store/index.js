@@ -1,9 +1,17 @@
-import React,{createContext}from 'react';
+import React,{createContext,useReducer}from 'react';
+import reducer from '../reducer/index';
+const initialState={
+    count:0
+};
 
-export const Store = createContext();
+export const Store = createContext({
+globalState: initialState,
+setGlobalState: () => null
+});
 
 const StoreProvaider = ({children})=>{
-    return <Store.Provider value="Hello world.I'm store value">{children}</Store.Provider>;
+    const [globalState,setGlobalState]=useReducer(reducer,initialState)
+    return <Store.Provider value={{globalState,setGlobalState}}>{children}</Store.Provider>;
 };
 
 export default StoreProvaider;

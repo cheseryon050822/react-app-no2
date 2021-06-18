@@ -8,6 +8,9 @@ const ComponentA = () => {
   const ComponentB = () => {
       history.push("/ComponentB")
     }
+    const ComponentC = () => {
+      history.push("/ComponentC")
+    }
     useEffect(() => {
     console.log('useEffectが呼び出されました。')
     axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -20,6 +23,7 @@ const ComponentA = () => {
         <Switch>
       <div>
         <button onClick={ComponentB}>ComponentBへ移動</button>
+        <button onClick={ComponentC}>ComponentBへ移動</button>
         <div>count:{count}</div>
         </div>
         </Switch>

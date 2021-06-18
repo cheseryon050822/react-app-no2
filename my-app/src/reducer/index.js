@@ -1,4 +1,4 @@
-import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE} from '../actions/index';
+import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE,INCREMENT,DECREMENT, REQUIEM} from '../actions/index';
 const reducer = (state=[],action)=>{
     switch (action.type) {
     case ADD_EVENT:
@@ -12,6 +12,12 @@ const reducer = (state=[],action)=>{
         const result = state.filter(data => data.id !== action.id)
         console.log(result)
         return result
-    }
+    case INCREMENT:
+        return{...state,count:state.count +1};
+    case DECREMENT:
+        return{...state,count:state.count -1};
+    case REQUIEM:
+        return{...state,count:state.count};
+    };　
 };
 export default reducer;
