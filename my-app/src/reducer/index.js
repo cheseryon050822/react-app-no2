@@ -1,4 +1,4 @@
-import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE,INCREMENT,DECREMENT, REQUIEM} from '../actions/index';
+import {ADD_EVENT,DELETE_ALL_EVENT,BULE_WAVE,INCREMENT,DECREMENT, REQUIEM,LOTTE} from '../actions/index';
 const reducer = (state=[],action)=>{
     switch (action.type) {
     case ADD_EVENT:
@@ -17,7 +17,17 @@ const reducer = (state=[],action)=>{
     case DECREMENT:
         return{...state,count:state.count -1};
     case REQUIEM:
-        return{...state,count:state.count};
+        return{...state,count:0};
+    case LOTTE:
+        var num = state.count +1
+        console.log(num)
+if (num %3===0) {
+    console.log(state.count +1);
+}else{
+    console.log(state.count +10);
+}
+
+
+}
     };　
-};
 export default reducer;
