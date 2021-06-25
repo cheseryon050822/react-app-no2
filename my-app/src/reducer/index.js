@@ -7,7 +7,7 @@ const reducer = (state=[],action)=>{
         console.log(id)
         return [...state,{id,...event}];
     case DELETE_ALL_EVENT:
-        return []
+            return []
     case BULE_WAVE:
         const result = state.filter(data => data.id !== action.id)
         console.log(result)
@@ -21,13 +21,11 @@ const reducer = (state=[],action)=>{
     case LOTTE:
         var num = state.count +1
         console.log(num)
-if (num %3===0) {
-    console.log(state.count +1);
-}else{
-    console.log(state.count +10);
-}
-
-
-}
+    if  (3===0) {
+        console.log(state.count +10)
+        }else{
+        console.log(state.count +1)
+    }
+    }   
     };　
 export default reducer;

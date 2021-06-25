@@ -18,7 +18,6 @@ const ComponentC = () =>{
     return(
          <div>
          <button onClick={yayoi}>ComponentBへ移動</button>
-        
          <h1>{state.count}</h1>
          <ComponentD>
          </ComponentD>

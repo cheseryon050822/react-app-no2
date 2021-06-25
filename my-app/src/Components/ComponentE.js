@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { Component } from 'react';
 import { ButtonToolbar } from 'react-bootstrap';
-import {INCREMENT,DECREMENT, REQUIEM, LOTTE}from '../actions/index';
+import {INCREMENT,DECREMENT, REQUIEM,LOTTE}from '../actions/index';
 import {Store} from '../store/index'
 const ComponentE = () => {
     const {globalState,setGlobalState}=useContext(Store);
