@@ -20,11 +20,12 @@ const reducer = (state=[],action)=>{
         return{...state,count:0};
     case LOTTE:
         var num = state.count +1
-        console.log(num)
-    if  (3===0) {
+    if  (state.count %3===0) {
         console.log(state.count +10)
+        return state
         }else{
-        console.log(state.count +1)
+        console.log(state.count +0)
+        return state
     }
     }   
     };　

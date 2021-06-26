@@ -22,8 +22,8 @@ const ComponentA = () => {
       <Router>
         <Switch>
       <div>
-        <button onClick={ComponentB}>ComponentBへ移動</button>
-        <button onClick={ComponentC}>ComponentBへ移動</button>
+        <button onClick={ComponentB}>ComponentBへ移動(エラー発生中)</button>
+        <button onClick={ComponentC}>ComponentCへ移動</button>
         <div>count:{count}</div>
         </div>
         </Switch>
