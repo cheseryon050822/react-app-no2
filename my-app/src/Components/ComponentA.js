@@ -1,10 +1,13 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import {BrowserRouter as Router,Switch,useHistory} from 'react-router-dom';
+import { hail} from '../actions';
 import axios from 'axios'
-
+import { Table } from 'react-bootstrap';
+import {Store} from '../store/index'
 const ComponentA = () => {
   const [count]=useState(0)
   const history= useHistory()
+  const {globalState,setGlobalState}=useContext(Store);
   const ComponentB = () => {
       history.push("/ComponentB")
     }
@@ -12,12 +15,14 @@ const ComponentA = () => {
       history.push("/ComponentC")
     }
     useEffect(() => {
-    console.log('useEffectが呼び出されました。')
     axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(res => {
-        console.log(res,'res check')
-    })
-    }, [])
+    .then(res =>  {
+        console.log(res,'res check') 
+      setGlobalState({
+        type:hail
+      })    
+      })
+  }, [])
     return(
       <Router>
         <Switch>

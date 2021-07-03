@@ -5,3 +5,5 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const REQUIEM = 'REQUIEM';
 export const LOTTE = 'LOTTE';
+export const rapid = 'rapid';
+export const hail = 'hail';
