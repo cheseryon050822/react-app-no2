@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import { Component } from 'react';
-import { ButtonToolbar,Table } from 'react-bootstrap';
+import { Button,Table } from 'react-bootstrap';
 import {INCREMENT,DECREMENT, REQUIEM,LOTTE,rapid}from '../actions/index';
 import {Store} from '../store/index'
 const ComponentE = () => {
@@ -35,7 +35,7 @@ console.log(globalState);
             <button onClick={ORIX}>-1</button>
             <button onClick={Goldexperience}>終わりがないのが終わり</button>
             <button onClick={Hansin}>な阪関無</button>
-        <button>onClick={Express}</button>
+        <Button　onClick={Express}>足痛い</Button>
             <Table striped bordered hover variant="dark">
   <thead>
     <tr>

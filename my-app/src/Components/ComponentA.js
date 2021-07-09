@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useContext} from 'react';
 import {BrowserRouter as Router,Switch,useHistory} from 'react-router-dom';
-import { hail} from '../actions';
+import {hail} from '../actions';
 import axios from 'axios'
 import { Table } from 'react-bootstrap';
 import {Store} from '../store/index'
@@ -20,9 +20,10 @@ const ComponentA = () => {
         console.log(res,'res check') 
       setGlobalState({
         type:hail
-      })    
       })
-  }, [])
+    })
+  　},
+  　[])
     return(
       <Router>
         <Switch>
